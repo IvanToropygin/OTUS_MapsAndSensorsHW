@@ -143,7 +143,7 @@ class CameraActivity : AppCompatActivity() {
             }
             Log.d("LOCATION", location.toString())
 
-            val folderPath = "${getExternalFilesDir(Environment.DIRECTORY_PICTURES)}/photos/"
+            val folderPath = "${filesDir.absolutePath}/photos/"
             val folder = File(folderPath)
             if (!folder.exists()) {
                 folder.mkdirs()
